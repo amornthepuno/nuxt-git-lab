@@ -5,6 +5,6 @@ const count = ref(0)
 <template>
   <div>
     <p>กดไปแล้ว: <strong>{{ count }}</strong> ครั้ง</p>
-    <button @click="count++">+1</button>
+    <button @click="count++">กดเลย</button>
   </div>
 </template>
