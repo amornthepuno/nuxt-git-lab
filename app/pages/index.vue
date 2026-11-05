@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 👉 แบบฝึกหัดที่ 1: เปลี่ยนชื่อตรงนี้เป็นชื่อของคุณ แล้ว commit
-const ownerName = 'Your Name'
+const ownerName = 'UNO'
 </script>
 
 <template>
