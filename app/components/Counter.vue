@@ -8,3 +8,4 @@ const count = ref(0)
     <button @click="count++">กดเลย</button>
   </div>
 </template>
+<<<<<<< test
