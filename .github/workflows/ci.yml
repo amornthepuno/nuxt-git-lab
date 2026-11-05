@@ -14,6 +14,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # ถ้าเจอบรรทัดที่ขึ้นต้นด้วย <<<<<<< หรือ >>>>>>> (ร่องรอย merge conflict) ให้ CI fail
+      # (ยกเว้นไฟล์ .md เพราะในบทเรียนมีตัวอย่าง conflict ที่ตั้งใจใส่ไว้)
+      - name: Check for merge conflict markers
+        run: |
+          if git grep -nE '^(<<<<<<<|>>>>>>>)( |$)' -- ':!*.md'; then
+            echo "::error::พบเครื่องหมาย merge conflict หลงอยู่ในโค้ด"
+            exit 1
+          fi
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
