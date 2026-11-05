@@ -1,0 +1,23 @@
+# Nuxt build output
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.idea
+
+# Local env files (ห้าม commit ความลับ!)
+.env
+.env.*
+!.env.example
